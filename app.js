@@ -4,6 +4,7 @@
 var express = require("express");
 var app = express();
 app.set("view engine","ejs");
+app.use(express.static("public"));
 
 //================================
 // ROUTES 
@@ -24,7 +25,7 @@ app.get("/megaHelloWorld", function(req,res){
 			if(!queryString[oneKey]){
 				queryString[oneKey]="(empty)";
 			}
-			feedbackString += "The "+oneKey+" was "+queryString[oneKey]+". "; 
+			feedbackString += "<br>The "+oneKey+" was "+queryString[oneKey]+". "; 
 		});
 	}
 	res.send(feedbackString);
