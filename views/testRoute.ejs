@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Testing route with AJAX</title>
+</head>
+<body>
+<!-- set up buttons to trigger different HTTP requests-->
+<p>Click the following buttons to send corresponding request to route <a href="/megaHelloWorld">/megaHelloWorld</a></p>
+<button id="get-btn">Submit GET Request</button>
+<button id="post-btn">Submit POST Request</button>
+<button id="put-btn">Submit PUT Request</button>
+<button id="delete-btn">Submit DELETE Request</button>
+<!-- the received response from the sent request is shown below-->
+<p>The request response: <span id="requestReply"></span></p>
+<hr>
+<!-- Obtain user inputted queries -->
+<p>If you want to submit queries to <a href="/megaHelloWorld">/megaHelloWorld</a>, please write queries in the following area, and click "Submit GET Request" button to obtain the response. <br>If you intend to submit more than one query, please use "&amp;" to chain those queries without space.</p>
+<input type="text" id="queryText" placeholder="message=blarg">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- set up events of buttons to send request to /megaHelloWorld-->
+<script type="text/javascript">
+//initialize ajax url link
+var urlAddress="/megaHelloWorld";
+
+$("#get-btn").on("click", function(){
+	//modify url if queries are added
+	if($("#queryText").val()){
+		urlAddress +="?"+$("#queryText").val();
+		$("#queryText").val("");
+	}
+	callAjax("GET");
+});
+
+$("#post-btn").on("click",function(){
+	callAjax("POST");
+});
+
+$("#put-btn").on("click", function(){
+	callAjax("PUT");
+});
+
+$("#delete-btn").on("click", function(){
+	callAjax("DELETE");
+});
+//define a funciton to call Ajax with settings
+function callAjax(requestType){
+		$.ajax({
+		url:urlAddress,
+		type:requestType,
+		success: function(data){
+			$("#requestReply").html(data);
+			urlAddress="/megaHelloWorld";
+		}
+	});
+}
+</script>
+</body>
+</html>
