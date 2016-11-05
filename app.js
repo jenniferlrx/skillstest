@@ -54,6 +54,10 @@ app.get("/*", function(req,res){
 //===================================
 // start server, listen to port 3000
 //===================================
-app.listen(3000, function(){
-	console.log('Example app listening on port 3000!');
+// app.listen(3000, function(){
+// 	console.log('Example app listening on port 3000!');
+// });
+
+app.listen(process.env.PORT, process.env.IP,function(){
+    console.log("Server Is Working!");
 });

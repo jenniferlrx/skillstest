@@ -1,0 +1,59 @@
+html { 
+  background: url(https://images.unsplash.com/photo-1476169785137-3bfe32e30ee1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=5441be1e06246b89f335e53c3e376ec3) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+	background: none;
+}
+
+.explain{
+	color: #AAA;
+}
+
+.center{
+	text-align: center;
+}
+
+.btn{
+	margin: 10px;
+	width: 180px;
+}
+
+.jumbotron{
+	background-color: rgba(242, 242, 242, 0.92);
+	margin-top: 10%; 
+}
+
+.btns{
+	max-width: 820px;
+}
+
+.response{
+	display: none;
+}
+
+.requestReply{
+	padding:20px 10px;	
+}
+
+.showResponse{
+	display: block;
+	color: white;
+	max-width: 400px; 
+	margin: 40px auto;
+	padding: 20px auto;
+	border-radius: 25px;
+}
+
+#routeQuery{
+	padding: 6px;
+}
+
+#queryText{
+	padding-left: 6px;
+	min-width: 200px;
+}
