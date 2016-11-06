@@ -14,7 +14,9 @@ Basic application of node, express, routing and ajax
 
 3. For every other path, it will response with a redifined ERROR message
 
-4. A mobile-friendly, responsive UI design
+4. EJS template was applied
+
+5. A mobile-friendly, responsive UI design
 
 
 
