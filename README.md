@@ -6,12 +6,11 @@ Basic application of node, express, routing and ajax
 
 2. Three routes are defined: "/", "/megaHelloWorld" and "/testRoute".
 
-..* GET "/" responses with "Hello World".
+  * Root URL "/" responses with "Hello World" for GET requests.
 
-..* "/megaHelloWorld" route responses to four HTTP requests: GET, PUT, POST and DELETE. 
-The GET response also accepts a query string paramenter passed via the URL.
+  * "/megaHelloWorld" route responses to four HTTP requests: GET, PUT, POST and DELETE. The GET response also accepts a query string paramenter passed via the URL.
 
-..* "/testRoute" is used for testing the requests to "/megaHelloWorld" with the jQuery AJAX function. Users can also put a query string in the input field and request a GET response with that query.
+  * "/testRoute" is used for testing the requests to "/megaHelloWorld" with the jQuery AJAX function. Users can also put a query string in the input field and request a GET response with that query.
 
 3. For every other path, it will response with a redifined ERROR message
 
