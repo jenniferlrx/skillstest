@@ -1,14 +1,22 @@
 # skillstest
 
 Basic application of node, express, routing and ajax
-Three routes are defined: "/", "/megaHelloWorld" and "/testRoute".
 
-GET "/" responses with "Hello World".
+1. The app starts a server and listens on port 3000 for connections
 
-"/megaHelloWorld" route responses to four HTTP requests: GET, PUT, POST and DELETE. 
+2. Three routes are defined: "/", "/megaHelloWorld" and "/testRoute".
+
+..* GET "/" responses with "Hello World".
+
+..* "/megaHelloWorld" route responses to four HTTP requests: GET, PUT, POST and DELETE. 
 The GET response also accepts a query string paramenter passed via the URL.
 
-"/testRoute" is used for testing the responses to "/megaHelloWorld" with the jQuery AJAX function, including GET request with a query string.
+..* "/testRoute" is used for testing the requests to "/megaHelloWorld" with the jQuery AJAX function. Users can also put a query string in the input field and request a GET response with that query.
+
+3. For every other path, it will response with a redifined ERROR message
+
+4. A mobile-friendly, responsive UI design
+
 
 
 
